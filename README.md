@@ -4,7 +4,7 @@
 A command-line application using Node.js to generate a team profile.
 ## Link to Demonstration 
 
-_Insert link to demo here
+_Insert link to demo here_
 
 ## Project Description
 
@@ -21,7 +21,10 @@ The HTML will be polished, responsive, and will contain links to profiles, email
 * CSS
 * Javascript
 * Node.js
-* npm (inquirer, jest)
+* npm
+    * jest: to run test cases for js files
+    * inquirer: to prompt the user for data storage
+    
 ## Tasks to Complete the Job :white_check_mark:
 
 - [ ] 
