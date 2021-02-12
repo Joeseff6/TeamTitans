@@ -36,16 +36,16 @@ const questions = {
     engineerQuestions: [
         {
             type: `input`,
-            name: `office`,
-            message: `What is the manager's office number?`
+            name: `github`,
+            message: `What is the engineer's github username?`
         },
     ],
 
     internQuestions: [
         {
             type: `input`,
-            name: `office`,
-            message: `What is the manager's office number?`
+            name: `school`,
+            message: `What is the name of the school the student is studying at?`
         },
     ],
 };

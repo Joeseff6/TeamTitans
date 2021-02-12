@@ -12,8 +12,16 @@ function main() {
     console.log("Please answer the following questions to build your roster:");
 
     inquirer.prompt(questions.startingQuestions).then((answers) => {
-        if (answers.role === `Manager`) {
-            inquirer.prompt(questions.managerQuestions)
+        switch (answers.role) {
+            case `Manager`:
+                inquirer.prompt(questions.managerQuestions);
+                break;
+            case `Engineer`:
+                inquirer.prompt(questions.engineerQuestions);
+                break;
+            case `Intern`:
+                inquirer.prompt(questions.internQuestions);
+                break;
         }
     });
 
