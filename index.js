@@ -8,7 +8,7 @@ const questions = require(`./questions`);
 const choices = [`yes`,`no`];
 let employees = [];
 
-console.log("Welcome to TeenTitans, a team roster app!");
+console.log("Welcome to TeamTitans, a team roster app!");
 console.log("Please answer the following questions to build your roster:");
 
 function main() {
