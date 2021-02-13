@@ -6,6 +6,7 @@ const Manager = require(`./lib/Manager`);
 const Engineer = require(`./lib/Engineer`);
 const questions = require(`./questions`);
 const choices = [`yes`,`no`];
+const buildHTML = require(`./src/html`)
 let employees = [];
 
 console.log("Welcome to TeamTitans, a team roster app!");
@@ -61,6 +62,8 @@ const addEmployee = (newEmployee) => {
             console.log(`Thank you for using TeamTitans!`)
             console.log(`Below are your team members:`)
             console.log(employees)
+            const html = buildHTML()
+            fs.writeFileSync(`./index.html`, html);
         }
     })
 }
