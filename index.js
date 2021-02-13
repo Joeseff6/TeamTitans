@@ -13,33 +13,39 @@ console.log("Please answer the following questions to build your roster:");
 
 function main() {
     inquirer.prompt(questions.startingQuestions).then((answers) => {
+        let newEmployee = new Manager(answers.managerName, answers.managerId,answers.managerEmail,answers.managerOffice)
+        addEmployee(newEmployee)
+    });
+}
+
+const employeeQuestions = () => {
+    inquirer.prompt(questions.employeeQuestions).then((answers) => {
         switch (answers.role) {
             case `Manager`:
                 inquirer.prompt(questions.managerQuestions).then((newAnswer) => {
                     let newEmployee = new Manager(answers.name, answers.id,answers.email,newAnswer.office)
-                    employees.push(newEmployee);
-                    addEmployee()
+                    addEmployee(newEmployee)
                 });
                 break;
             case `Engineer`:
                 inquirer.prompt(questions.engineerQuestions).then((newAnswer) => {
                     let newEmployee = new Engineer(answers.name, answers.id,answers.email,newAnswer.github)
-                    employees.push(newEmployee);
-                    addEmployee()
+                    addEmployee(newEmployee)
                 });
                 break
             case `Intern`:
                 inquirer.prompt(questions.internQuestions).then((newAnswer) => {
                     let newEmployee = new Intern(answers.name, answers.id,answers.email,newAnswer.school)
-                    employees.push(newEmployee);
-                    addEmployee()
+                    addEmployee(newEmployee)
                 });
                 break
         }
-    });
+    })
 }
 
-const addEmployee = () => {
+
+const addEmployee = (newEmployee) => {
+    employees.push(newEmployee);
     inquirer.prompt([
         {
             type: `list`,
@@ -50,9 +56,10 @@ const addEmployee = () => {
     ])
     .then((answers) => {
         if (answers.choice === `yes`) {
-            main()
+            employeeQuestions()
         } else {
             console.log(`Thank you for using TeamTitans!`)
+            console.log(`Below are your team members:`)
             console.log(employees)
         }
     })
