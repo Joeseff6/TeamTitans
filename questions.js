@@ -4,6 +4,29 @@ const questions = {
     startingQuestions: [
         {
             type: `input`,
+            name: `managerName`,
+            message: `What is your name?`,
+        },
+        {
+            type: `input`,
+            name: `managerId`,
+            message: `What is your ID?`,
+        },
+        {
+            type: `input`,
+            name: `managerEmail`,
+            message: `What is your email address?`,
+        },
+        {
+            type: `input`,
+            name: `managerOffice`,
+            message: `What is your office number?`
+        },
+    ],
+    
+    employeeQuestions: [
+        {
+            type: `input`,
             name: `name`,
             message: `What is the employee name?`,
         },
