@@ -2,9 +2,6 @@
 
 # TeamTitans
 A command-line application using Node.js to generate a team profile.
-## Link to Demonstration 
-
-https://drive.google.com/file/d/12M2714X1rqtv6F7Gsqm0me_o7wt8Q3C5/view?usp=sharing
 
 ## Project Description
 
